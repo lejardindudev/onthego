@@ -1,0 +1,29 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for NoteCardEdit component
+*/
+.NoteCardEdit{
+  
+}
+.EditCard{
+  &-title{
+    color:$textColor;
+    font-weight:600;
+    width:100%;
+    // max-width:
+    padding:$xxSmallSpace $space;
+    // border-radius:100px;
+    // border:1px solid $textUltraLightColor;
+    margin-bottom:$space;
+    // display:inline-block;
+    // box-sizing:border-box;
+    &:focus{
+      border:3px solid $textUltraLightColor;
+      outline:0;
+    }
+  }
+  &-content{
+    min-height:200px;
+    font-size:$space;
+  }
+}

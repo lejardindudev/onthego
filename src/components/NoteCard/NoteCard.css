@@ -1,0 +1,99 @@
+/*
+  Styles for NoteCard component
+*/
+.NoteCard {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1.3em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px rgba(48, 41, 80, 0.1137254902);
+}
+.NoteCard.color1 {
+  background-color: #FDE0CC;
+  border: 1px solid #fff;
+}
+.NoteCard.color1 .Button:hover {
+  background-color: #fff;
+}
+.NoteCard.color2 {
+  background-color: #F9E9FA;
+  border: 1px solid #fff;
+}
+.NoteCard.color2 .Button:hover {
+  background-color: #fff;
+}
+.NoteCard.color3 {
+  background-color: #ECE4FF;
+  border: 1px solid #fff;
+}
+.NoteCard.color3 .Button:hover {
+  background-color: #fff;
+}
+.NoteCard.color4 {
+  background-color: #E8EBFF;
+  border: 1px solid #fff;
+}
+.NoteCard.color4 .Button:hover {
+  background-color: #fff;
+}
+.NoteCard.color5 {
+  background-color: #DEE8E7;
+  border: 1px solid #fff;
+}
+.NoteCard.color5 .Button:hover {
+  background-color: #fff;
+}
+.NoteCard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.NoteCard-header-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6em;
+}
+.NoteCard-content {
+  margin-bottom: 1.6em;
+}
+.NoteCard-footer {
+  margin-top: auto;
+  color: #BCB9CC;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.NoteCard-footer-date {
+  font-size: 0.8em;
+}
+.NoteCard-footer-manage {
+  display: flex;
+  gap: 0.3em;
+  margin: 0;
+}
+
+.Button {
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.Button:hover {
+  background-color: #F4EEFF;
+}
+@media screen and (min-width: 480px) {
+  .Button {
+    width: 40px;
+    height: 40px;
+  }
+}
+.Button-img {
+  width: 100%;
+}/*# sourceMappingURL=NoteCard.css.map */

@@ -1,0 +1,21 @@
+/*
+  Styles for SingleNote component
+*/
+.SingleNote {
+  width: 95%;
+  margin-inline: auto;
+  max-width: 860px;
+}
+.SingleNote-backLink {
+  display: inline-block;
+  margin-top: 1em;
+  text-decoration: none;
+  color: #BCB9CC;
+  font-size: 0.8em;
+}
+.SingleNote-backLink:hover {
+  color: #4A40E0;
+}
+.SingleNote-backLink::before {
+  content: "<-- ";
+}/*# sourceMappingURL=SingleNote.css.map */

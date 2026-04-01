@@ -1,0 +1,21 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for Title component
+*/
+.Title{
+  text-align: center;
+  @include media($tablet){
+    text-align:left;
+    padding:$mediumSpace;
+  }
+  &-title{
+    font-weight: 800;
+    font-family: $fontTitles;
+    margin-bottom:$xxSmallSpace;
+  }
+  &-text{
+    margin-top:0;
+    color:$textLightColor
+  }
+  
+}

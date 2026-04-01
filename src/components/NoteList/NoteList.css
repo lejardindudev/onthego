@@ -1,0 +1,38 @@
+/*
+  Styles for NoteList component
+*/
+.NoteList {
+  padding-bottom: 150px;
+}
+.NoteList-pinned {
+  padding-bottom: 1.6em;
+  margin-bottom: 2em;
+  border-bottom: #BCB9CC solid 1px;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+@media screen and (min-width: 480px) {
+  .NoteList-pinned {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 480px) {
+  .NoteList-unPinned {
+    -moz-columns: 2;
+         columns: 2;
+    -moz-column-gap: 1em;
+         column-gap: 1em;
+  }
+}
+@media screen and (min-width: 860px) {
+  .NoteList-unPinned {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
+.NoteList-unPinned-note {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 1em;
+}/*# sourceMappingURL=NoteList.css.map */

@@ -1,0 +1,32 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for Button component
+*/
+.Cta{
+  background-color: $altColor;
+  color:$white;
+  font-family: $fontTitles;
+  font-weight:600;
+  text-transform: uppercase;
+  border-radius: 100px;
+  box-shadow:$shadow;
+  outline:none;
+  border:0;
+  padding:$space;
+  cursor:pointer;
+  box-shadow:0 0 0 $bgDarkColor;
+  transition:.3s;
+  &:hover{
+    // color:$altColor;
+    background-color: $textLightColor;
+    box-shadow:$shadow;
+  }
+  &.secondary{
+    background-color: transparent;
+    color:$altColor;
+    border:solid 1px $altColor;
+    &:hover{
+      background-color: $white;;
+    }
+  }
+}

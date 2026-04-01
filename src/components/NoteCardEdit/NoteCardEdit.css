@@ -1,0 +1,18 @@
+/*
+  Styles for NoteCardEdit component
+*/
+.EditCard-title {
+  color: #302950;
+  font-weight: 600;
+  width: 100%;
+  padding: 0.3em 1em;
+  margin-bottom: 1em;
+}
+.EditCard-title:focus {
+  border: 3px solid #BCB9CC;
+  outline: 0;
+}
+.EditCard-content {
+  min-height: 200px;
+  font-size: 1em;
+}/*# sourceMappingURL=NoteCardEdit.css.map */

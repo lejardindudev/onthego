@@ -1,0 +1,30 @@
+/*
+  Styles for Button component
+*/
+.Cta {
+  background-color: #4A40E0;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 100px;
+  box-shadow: 5px 5px 15px rgba(48, 41, 80, 0.1137254902);
+  outline: none;
+  border: 0;
+  padding: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 0 #F4EEFF;
+  transition: 0.3s;
+}
+.Cta:hover {
+  background-color: #5E5680;
+  box-shadow: 5px 5px 15px rgba(48, 41, 80, 0.1137254902);
+}
+.Cta.secondary {
+  background-color: transparent;
+  color: #4A40E0;
+  border: solid 1px #4A40E0;
+}
+.Cta.secondary:hover {
+  background-color: #fff;
+}/*# sourceMappingURL=Button.css.map */

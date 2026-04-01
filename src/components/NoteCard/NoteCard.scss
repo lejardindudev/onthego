@@ -1,0 +1,111 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for NoteCard component
+*/
+.NoteCard{
+  background-color: $white;
+  border-radius: $radius;
+  padding:$mediumSpace;
+  display:flex;
+  flex-direction: column;
+  box-shadow:$shadow;
+  &.color1{
+    background-color: $color1;border:1px solid $white;
+    .Button{
+      &:hover{
+        background-color: $white;
+      }
+    }
+  }
+  &.color2{
+    background-color: $color2;border:1px solid $white;
+    .Button{
+      &:hover{
+        background-color: $white;
+      }
+    }
+  }
+  &.color3{
+    background-color: $color3;border:1px solid $white;
+    .Button{
+      &:hover{
+        background-color: $white;
+      }
+    }
+  }
+  &.color4{
+    background-color: $color4;border:1px solid $white;
+    .Button{
+      &:hover{
+        background-color: $white;
+      }
+    }
+  }
+  &.color5{
+    background-color: $color5;border:1px solid $white;
+    .Button{
+      &:hover{
+        background-color: $white;
+      }
+    }
+  }
+  &-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    &-title{
+      font-family: $fontTitles;
+      font-size:$bigSpace;
+    }
+    &-button{
+      
+      &-img{
+
+      }
+    }
+  }
+  &-content{
+    margin-bottom:$bigSpace;
+  }
+  &-footer{
+    margin-top:auto;
+    color:$textUltraLightColor;
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    &-date{
+      font-size:$smallSpace;
+    }
+    &-manage{
+      display:flex;
+      gap:$xxSmallSpace;
+      margin:0;
+
+    }
+  }
+  
+}
+
+.Button{
+  background-color: transparent;
+  border:none;
+  border-radius: 100px;
+  width:35px;
+  height:35px;
+  display: flex;
+  flex-shrink:0;
+  justify-content: center;
+  align-items: center;
+  transition:.3s;
+  cursor:pointer;
+  &:hover{
+    background-color: $bgDarkColor;
+  }
+  @include media($tablet){
+    width:40px;
+    height:40px;
+  }
+  &-img{
+    width:100%;
+  }
+}

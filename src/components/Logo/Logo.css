@@ -1,0 +1,28 @@
+.Logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 90px;
+}
+.Logo-img {
+  max-width: 70px;
+  height: auto;
+}
+.Logo-caption {
+  display: none;
+  font-size: 1em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0 0 0 1em;
+  text-align: left;
+}
+@media screen and (min-width: 480px) {
+  .Logo-caption {
+    display: block;
+  }
+}
+.Logo-caption strong {
+  color: #4A40E0;
+  display: block;
+}/*# sourceMappingURL=Logo.css.map */

@@ -1,0 +1,24 @@
+/*
+  Styles for Search component
+*/
+.Search {
+  position: relative;
+}
+.Search-label {
+  position: absolute;
+  top: 50%;
+  left: 0.8em;
+  display: block;
+  transform: translateY(-50%);
+  width: 20px;
+}
+.Search-input {
+  border-radius: 50px;
+  border: solid 1px #BCB9CC;
+  padding: 1em 1em 1em 45px;
+  outline: none;
+  box-sizing: border-box;
+}
+.Search-input:focus {
+  border: #BCB9CC solid 3px;
+}/*# sourceMappingURL=Search.css.map */

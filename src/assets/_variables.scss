@@ -1,0 +1,59 @@
+// Colors
+$altColor:#4A40E0;
+$textColor:#302950;
+$textLightColor:#5E5680;
+$textUltraLightColor:#BCB9CC;
+
+$color1:#FDE0CC;
+$color2:#F9E9FA;
+$color3:#ECE4FF;
+$color4:#E8EBFF;
+$color5 :#DEE8E7;
+$white:#fff;
+
+$bgColor:#FAF4FF;
+$bgDarkColor:#F4EEFF;
+$bgDarkColorAlpha:#f4eeff88;
+$bgXDarkColor:#E6DEFF;
+
+// Shadows
+$thinShadow:2px 2px 8px #30295029;
+$shadow:5px 5px 15px #3029501d;
+
+// Spaces
+$xxBigSpace: 3em;
+$xBigSpace:2em; 
+$bigSpace: 1.6em;
+$mediumSpace: 1.3em;
+$space: 1em;
+$smallSpace: 0.8em; 
+$xSmallSpace:0.5em;
+$xxSmallSpace : .3em;  
+
+// Viewports
+$tablet:480px;
+$laptop:860px;
+$desktop:1200px;
+$widescreen:1980px;
+
+$vhMin:680px;
+$radius:25px;
+
+$fontTitles:"Plus Jakarta Sans", sans-serif;;
+$fontText:"Inter", sans-serif;
+
+
+// Mixins
+// Media queries
+@mixin media($breakpoint) {
+  @media screen AND (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Layout
+@mixin layout($max-width: $laptop) {
+  width: 95%;
+  margin-inline: auto;
+  max-width: $max-width;
+}

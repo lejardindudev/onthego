@@ -1,0 +1,29 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for Search component
+*/
+.Search{
+  position:relative;
+
+  &-label{
+    position:absolute;
+    top:50%;
+    left:$smallSpace;
+    display:block;
+    transform: translateY(-50%);
+    width:20px;
+    // &-img{
+    // }
+  }
+  &-input{
+    border-radius:50px;
+    border:solid 1px $textUltraLightColor;
+    padding:$space $space $space 45px;
+    outline:none;
+    box-sizing:border-box;
+    &:focus{
+      border:$textUltraLightColor solid 3px;;
+    }
+    
+  }
+}

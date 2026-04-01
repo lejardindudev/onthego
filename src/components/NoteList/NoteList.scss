@@ -1,0 +1,36 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for NoteList component
+*/
+.NoteList{
+  padding-bottom:150px;
+  &-pinned{
+    padding-bottom:$bigSpace;
+    margin-bottom:$xBigSpace;
+    border-bottom:$textUltraLightColor solid 1px;
+    display:flex;
+    gap:$space;
+    flex-direction:column;
+    @include media($tablet){
+    flex-direction:row;
+
+    }
+  }
+  &-unPinned{
+    // display:grid;
+    // gap:$space;
+    @include media($tablet){
+      columns:2;
+      column-gap:$space;
+    }
+    @include media($laptop){
+      columns:3;
+      
+    }
+    &-note{
+      break-inside: avoid;
+      margin-bottom:$space;
+    }
+  }
+  
+}

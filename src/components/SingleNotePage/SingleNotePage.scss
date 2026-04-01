@@ -1,0 +1,20 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for SingleNote component
+*/
+.SingleNote{
+  @include layout();
+  &-backLink{
+    display:inline-block;
+    margin-top:$space;
+    text-decoration: none;
+    color: $textUltraLightColor;
+    font-size: $smallSpace;
+    &:hover{
+      color:$altColor;
+    }
+    &::before{
+      content:"<-- "
+    }
+  }
+}

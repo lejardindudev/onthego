@@ -1,0 +1,21 @@
+/*
+  Styles for Title component
+*/
+.Title {
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .Title {
+    text-align: left;
+    padding: 1.3em;
+  }
+}
+.Title-title {
+  font-weight: 800;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 0.3em;
+}
+.Title-text {
+  margin-top: 0;
+  color: #5E5680;
+}/*# sourceMappingURL=Title.css.map */

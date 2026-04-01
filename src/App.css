@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  color: #302950;
+  font-family: "Inter", sans-serif;
+  background-color: #FAF4FF;
+}
+@media screen and (min-width: 860px) {
+  body {
+    font-size: 1.3em;
+  }
+}
+
+input, textarea {
+  color: #302950;
+  padding: 0.3em 1em;
+  border-radius: 100px;
+  border: 1px solid #BCB9CC;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.443);
+}
+input:focus, textarea:focus {
+  border: 3px solid #BCB9CC;
+  outline: 0;
+}
+
+textarea {
+  border-radius: 25px;
+  padding: 1.6em;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F4EEFF;
+}/*# sourceMappingURL=App.css.map */

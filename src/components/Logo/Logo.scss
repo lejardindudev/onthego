@@ -1,0 +1,30 @@
+@use "../../assets/variables" as *;
+.Logo{
+    // width:150px;
+    display:flex;
+    align-items:center;
+    text-align: center;
+    margin:0;
+    padding:0;
+    height:90px;
+    
+    &-img{
+        max-width:70px;
+        height:auto;
+
+    }
+    &-caption{
+        display:none;
+        font-size:$space;
+        font-family: $fontTitles;
+        margin:0 0 0 $space;
+        text-align:left;
+        @media screen AND (min-width:$tablet){
+            display:block;
+        }
+         strong{
+            color:$altColor;
+            display:block;
+         }
+    }
+}
