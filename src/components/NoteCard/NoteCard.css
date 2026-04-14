@@ -57,6 +57,9 @@
   color: #302950;
   text-decoration: none;
 }
+.NoteCard-header-button {
+  pointer-events: none;
+}
 .NoteCard-content {
   margin-bottom: 1.6em;
   line-clamp: 6;

@@ -5,14 +5,12 @@
 //## UTILS  ###########
 
 // ## ASSETS - RESSOURCES #############
-import './Search.css';
+import "./Search.css";
 import magnifying from "../../assets/img/magnifying.svg";
 
 //## COMPONENTS  ###########
 
-
-export default function Search() {
-
+export default function Search({ onChange }) {
   return (
     <>
       <form className="Search">
@@ -23,9 +21,15 @@ export default function Search() {
             className="Search-label-icon"
           />
         </label>
-        <input className="Search-input" type="text" id="search" name="search" placeholder="Search for notes ..." />
+        <input
+          onChange={onChange}
+          className="Search-input"
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Search for notes ..."
+        />
       </form>
     </>
   );
-
 }

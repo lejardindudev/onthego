@@ -43,9 +43,7 @@ export default function NoteCard({
             <img src={icoPinned} className="Button-img" />
           </button>
         ) : (
-          <button className="NoteCard-header-button Button">
-            <img src={icoUnPinned} className="Button-img" />
-          </button>
+          ""
         )}
       </header>
       <div className="NoteCard-content">{description}</div>

@@ -47,15 +47,15 @@
       "description": "Lo-fi beats, FKJ, Bonobo, Nujabes. Ajouter aussi des morceaux instrumentaux pour travailler en concentration et tester différentes ambiances selon les moments de la journée.",
       "date": "03/04/26 - 20:00",
       "isPinned": true,
-      "color": ""
+      "color": "color2"
     },
     {
       "id": "6",
       "title": "Recette rapide",
       "description": "Pâtes + crème + champignons + ail + parmesan. ",
       "date": "03/04/26 - 12:15",
-      "isPinned": false,
-      "color": ""
+      "isPinned": true,
+      "color": "color4"
     },
     {
       "id": "7",

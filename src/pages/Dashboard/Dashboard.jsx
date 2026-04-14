@@ -1,7 +1,7 @@
 //## HOOKS ##########
 // import { useState } from 'react';
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 //## UTILS  ###########
 
@@ -15,12 +15,18 @@ import Button from "../../components/Button";
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const notes = useSelector((store) => store.NOTE.noteList);
+  // const notes = useSelector((store) => store.NOTE.noteList);
+  const { filteredNotes } = useOutletContext();
+
+  if (!filteredNotes) {
+    return <p>Chargement ...</p>;
+  }
+
   return (
     <>
       <main className="Content">
         <Title />
-        <NoteList notes={notes} />
+        <NoteList notes={filteredNotes} />
       </main>
       <footer className="FooterDash">
         <Button
