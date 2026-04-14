@@ -1,0 +1,59 @@
+/*
+  Styles for EditNotePage component
+*/
+@media screen and (min-width: 860px) {
+  .EditNoteArea {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1em;
+  }
+}
+.EditNoteArea-settingsButton {
+  margin-right: auto;
+  border: 2px solid transparent;
+}
+.EditNoteArea-settingsButton:hover {
+  background-color: #fff;
+}
+@media screen and (min-width: 480px) {
+  .EditNoteArea-settingsButton {
+    display: none;
+  }
+}
+.EditNoteArea-bottomTabWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .EditNoteArea-bottomTabWrapper {
+    position: static;
+    width: 100%;
+  }
+}
+.EditNoteArea-bottomTabWrapper-settings {
+  box-shadow: -4px 0 10px #E6DEFF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  padding-bottom: 90px !important;
+  transition: 0.3s;
+}
+.EditNoteArea-bottomTabWrapper-settings.open {
+  transform: translateY(0);
+}
+@media screen and (min-width: 480px) {
+  .EditNoteArea-bottomTabWrapper-settings {
+    position: static;
+    transform: translateY(0);
+    margin-top: 1em;
+    box-shadow: none;
+  }
+}
+@media screen and (min-width: 860px) {
+  .EditNoteArea-bottomTabWrapper-settings {
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=EditNotePage.css.map */

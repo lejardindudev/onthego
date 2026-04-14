@@ -1,40 +1,48 @@
 //## HOOKS ##########
 // import { useState } from 'react';
-// import { useEffect } from 'react';
-import {useSelector} from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 //## UTILS  ###########
+import NoteApi from "./api/noteApi";
+import { setNoteList } from "./store/notes/notesSlice";
 
 // ## ASSETS - RESSOURCES #############
-import './App.css'
-
+import "./App.css";
 
 //## COMPONENTS  ###########
 import Logo from "./components/Logo/Logo";
 import Search from "./components/Search/";
-import Dashboard from "./components/Dashboard";
-import SingleNotePage from "./components/SingleNotePage";
-import EditNotePage from "./components/EditNotePage";
-
+import { Outlet } from "react-router-dom";
 
 function App() {
-  // const [count, setCount] = useState(0)
-  const notes = useSelector((store) => store.NOTE.notes)
-  const singleNote = notes [3];
+  const dispatch = useDispatch();
+
+  const fetchAllNotes = async () => {
+    const notes = await NoteApi.fetchAll();
+    //TODO: implement this
+    //  const getNextIndex = await NoteApi.fetchNextIndex();
+    // stockage des notes dans le store
+    dispatch(setNoteList(notes));
+    // dispatch(setNextNoteId(nextNoteId));
+  };
+
+  useEffect(() => {
+    fetchAllNotes();
+  }, []);
 
   return (
     <>
-    <header className="Header">
-      <Logo />
-      <Search />
-    </header>
-    <Dashboard notes = {notes}/>
-    {/* <SingleNotePage note = {singleNote}/> */}
-    {/* <EditNotePage note = {singleNote}/> */}
-   
-      
+      <header className="Header">
+        <Logo />
+        <Search />
+      </header>
+      <Outlet />
+      {/* <Dashboard notes={notes} /> */}
+      {/* <SingleNotePage note={singleNote} /> */}
+      {/* <EditNotePage note={singleNote} /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

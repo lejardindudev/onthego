@@ -3,22 +3,18 @@
 // import { useEffect } from 'react';
 
 //## UTILS  ###########
- import classManager from "../../helpers/classManager"
+import classManager from "../../utils/classManager";
 
 // ## ASSETS - RESSOURCES #############
-import './TemplateName.css';
+import "./TemplateName.css";
 
 //## COMPONENTS  ###########
 
-
-export default function TemplateName() {
- const dynamicClass = classManager([parentClass,"TemplateName"])
+export default function TemplateName({ parentClass }) {
+  const dynamicClass = classManager([parentClass, "TemplateName"]);
   return (
     <>
-      <div className={dynamicClass}>
-        TemplateName component
-      </div>
+      <div className={dynamicClass}>TemplateName component</div>
     </>
   );
-
 }

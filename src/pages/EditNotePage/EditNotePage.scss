@@ -1,0 +1,63 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for EditNotePage component
+*/
+.EditNoteArea{
+  @include media($tablet){
+
+  }
+  @include media($laptop){
+    display:grid;
+    grid-template-columns: 1fr 320px;
+    gap:$space;
+    // color:red;
+  }
+  &-settingsButton{
+    margin-right:auto;
+    // box-sizing:content-box;
+    border:2px solid transparent;
+    &:hover{
+      background-color: $white;
+    }
+    @include media ($tablet){
+      display:none;
+    }
+  }
+  &-bottomTabWrapper{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    // padding:$space;
+      @include media($tablet){
+        position:static;
+        width:100%;
+
+      }
+    &-settings{
+      box-shadow:-4px 0 10px $bgXDarkColor;
+      position:absolute;
+      bottom:0;
+      width:100%;
+      transform:translateY(100%);
+      padding-bottom:90px!important;
+      transition:.3s;
+      &.open{
+         transform:translateY(0);
+      }
+      // margin-bottom:80px;
+      @include media($tablet){
+        position:static;
+        transform:translateY(0) ;
+        margin-top:$space;
+        box-shadow:none;
+
+      }
+      @include media($laptop){
+        
+        margin-top:0;
+
+      }
+    }
+  }
+}

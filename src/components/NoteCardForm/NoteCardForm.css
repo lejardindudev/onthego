@@ -1,0 +1,36 @@
+/*
+  Styles for NoteCardEdit component
+*/
+.EditCard-title {
+  color: #302950;
+  font-weight: 600;
+  width: 100%;
+  padding: 0.3em 1em;
+  margin-bottom: 1em;
+}
+.EditCard-title:focus {
+  border: 3px solid #BCB9CC;
+  outline: 0;
+}
+.EditCard-content {
+  min-height: 200px;
+  font-size: 1em;
+}
+.EditCard-content.NoteCard-content {
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.TestedInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1em;
+  min-height: 61px;
+}
+.TestedInput-input {
+  margin-bottom: 0;
+}/*# sourceMappingURL=NoteCardForm.css.map */

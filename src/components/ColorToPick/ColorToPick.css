@@ -1,0 +1,42 @@
+/*
+  Styles for ColorToPick component
+*/
+.ColorToPick {
+  background-color: white;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.ColorToPick:hover {
+  cursor: pointer;
+  border-color: #BCB9CC;
+}
+.ColorToPick.active {
+  border: solid 3px #4A40E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ColorToPick.active .ColorToPick-image {
+  width: 15px;
+}
+.ColorToPick.square {
+  width: 65px;
+  height: 65px;
+  border-radius: 1em;
+}
+.ColorToPick.color1 {
+  background-color: #FDE0CC;
+}
+.ColorToPick.color2 {
+  background-color: #F9E9FA;
+}
+.ColorToPick.color3 {
+  background-color: #ECE4FF;
+}
+.ColorToPick.color4 {
+  background-color: #E8EBFF;
+}
+.ColorToPick.color5 {
+  background-color: #DEE8E7;
+}/*# sourceMappingURL=ColorToPick.css.map */

@@ -2,5 +2,49 @@
   Styles for SettingsCardEdit component
 */
 .SettingsCardEdit {
-  background-color: pink;
+  background-color: rgba(255, 255, 255, 0.443);
+  backdrop-filter: blur(8px);
+  padding: 1em;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 480px) {
+  .SettingsCardEdit {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+}
+
+.WidgetCardEdit-content {
+  background-color: #F4EEFF;
+  padding: 1em;
+  border-radius: 25px;
+}
+.WidgetCardEdit-title {
+  text-transform: uppercase;
+  color: #5E5680;
+  font-size: 0.6em;
+  margin-top: 2em;
+  padding-left: 1em;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.Pinned {
+  display: flex;
+  align-items: center;
+}
+.Pinned-img {
+  width: 25px;
+}
+.Pinned-title {
+  margin: 0 auto 0 1em;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.Colors-colorPicker {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=SettingsCardEdit.css.map */

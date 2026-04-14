@@ -3,5 +3,58 @@
   Styles for SettingsCardEdit component
 */
 .SettingsCardEdit{
-  background-color: pink;
+  background-color:$alphaWhite;
+  backdrop-filter: blur(8px);
+  padding:$space;
+  box-sizing: border-box;
+  @include media ($tablet) {
+    background-color:transparent;
+    backdrop-filter: blur(0);
+  }
+  // &-settings{   
+  //   // border:1px solid $textUltraLightColor;
+  // }
+}
+.WidgetCardEdit{
+  &-content{
+    background-color: $bgDarkColor;
+    padding:$space;
+    border-radius:$radius;
+  }
+  &-title{
+    text-transform: uppercase;
+    color:$textLightColor;
+    font-size:$xSmallSpace;
+    margin-top:$xBigSpace;
+    padding-left:$space;
+    font-weight:700;
+    font-family: $fontTitles;
+  }
+}
+.Pinned {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+ 
+  
+  &-img{
+    width:25px;
+  }
+  &-title{
+    margin: 0 auto 0 $space;
+    font-weight:700;
+    font-family: $fontTitles;
+  }
+}
+.Colors{
+  &-colorPicker{
+    display:flex;
+    justify-content: space-between;
+    gap:$space;
+    flex-wrap:wrap;
+    // &-color{
+
+    // }
+  }
+  
 }

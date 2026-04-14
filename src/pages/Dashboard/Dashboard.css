@@ -1,0 +1,33 @@
+/*
+  Styles for Dashboard component
+*/
+.Content {
+  width: 95%;
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+.FooterDash {
+  background-color: rgba(244, 238, 255, 0.5333333333);
+  backdrop-filter: blur(5px);
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}
+@media screen and (min-width: 480px) {
+  .FooterDash {
+    position: absolute;
+    bottom: auto;
+    top: 90px;
+    right: 1.6em;
+    left: auto;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+}/*# sourceMappingURL=Dashboard.css.map */

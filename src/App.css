@@ -3,10 +3,11 @@ body {
   color: #302950;
   font-family: "Inter", sans-serif;
   background-color: #FAF4FF;
+  font-size: 0.8em;
 }
 @media screen and (min-width: 860px) {
   body {
-    font-size: 1.3em;
+    font-size: 0.9em;
   }
 }
 
@@ -23,9 +24,34 @@ input:focus, textarea:focus {
   outline: 0;
 }
 
+pre {
+  white-space: pre-wrap;
+  font-family: "Inter", sans-serif;
+}
+
 textarea {
   border-radius: 25px;
   padding: 1.6em;
+}
+
+.color1 {
+  background-color: #FDE0CC;
+}
+
+.color2 {
+  background-color: #F9E9FA;
+}
+
+.color3 {
+  background-color: #ECE4FF;
+}
+
+.color4 {
+  background-color: #E8EBFF;
+}
+
+.color5 {
+  background-color: #DEE8E7;
 }
 
 .Header {
@@ -33,4 +59,5 @@ textarea {
   align-items: center;
   justify-content: space-around;
   background-color: #F4EEFF;
+  height: 90px;
 }/*# sourceMappingURL=App.css.map */

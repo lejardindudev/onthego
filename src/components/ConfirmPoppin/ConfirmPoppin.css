@@ -1,0 +1,39 @@
+/*
+  Styles for ConfirmPoppin component
+*/
+.Popin {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(244, 238, 255, 0.8980392157);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0;
+  transition: 0.9s;
+}
+.Popin.visible {
+  display: flex;
+  opacity: 1;
+}
+.Popin-content {
+  width: 95%;
+  margin-inline: auto;
+  max-width: 860px;
+  background-color: #fff;
+  padding: 3em 1.6em;
+  box-sizing: border-box;
+  border-radius: 1em;
+  border: solid 4px #BCB9CC;
+}
+.Popin-content-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.Popin-content-button {
+  margin-left: 1em;
+}/*# sourceMappingURL=ConfirmPoppin.css.map */

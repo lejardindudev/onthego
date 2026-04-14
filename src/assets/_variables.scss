@@ -10,11 +10,15 @@ $color3:#ECE4FF;
 $color4:#E8EBFF;
 $color5 :#DEE8E7;
 $white:#fff;
+$alphaWhite:rgba(255, 255, 255, 0.443);
+$gray:#d1d5db;
 
 $bgColor:#FAF4FF;
 $bgDarkColor:#F4EEFF;
 $bgDarkColorAlpha:#f4eeff88;
+$bgDarkColorLightAlpha:#f4eeffe5;
 $bgXDarkColor:#E6DEFF;
+$bgXxDarkColor:#ded6f5;
 
 // Shadows
 $thinShadow:2px 2px 8px #30295029;
@@ -27,8 +31,11 @@ $bigSpace: 1.6em;
 $mediumSpace: 1.3em;
 $space: 1em;
 $smallSpace: 0.8em; 
-$xSmallSpace:0.5em;
+$xSmallSpace:0.6em;
 $xxSmallSpace : .3em;  
+
+// Layout-sizes
+$headerHeight:90px;
 
 // Viewports
 $tablet:480px;

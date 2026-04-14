@@ -6,8 +6,9 @@ body{
     color:$textColor;
     font-family: $fontText;
     background-color: $bgColor;
+    font-size:.8em;
     @media screen AND (min-width:$laptop) {
-        font-size:$mediumSpace;
+        font-size:.9em;
     }
 }
 input,textarea{
@@ -16,19 +17,41 @@ input,textarea{
     border-radius:100px;
     border:1px solid $textUltraLightColor;
     box-sizing:border-box;
-    background-color: rgba(255, 255, 255, 0.443);
+    background-color: $alphaWhite;
     &:focus{
       border:3px solid $textUltraLightColor;
       outline:0;
     }
 }
+pre{
+    white-space: pre-wrap;
+    font-family: $fontText;
+}
 textarea{
     border-radius:$radius;
     padding:$bigSpace;;
 }
+.color1{
+    background-color: $color1;
+}
+.color2{
+    background-color: $color2;
+}
+.color3{
+    background-color: $color3;
+}
+.color4{
+    background-color: $color4;
+}
+.color5{
+    background-color: $color5;
+}
+
+// Components
 .Header{
     display:flex;
     align-items:center;
     justify-content: space-around;
     background-color: $bgDarkColor;
+    height:$headerHeight;
 }

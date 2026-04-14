@@ -7,12 +7,13 @@
   color:$white;
   font-family: $fontTitles;
   font-weight:600;
+  font-size:$space;
   text-transform: uppercase;
   border-radius: 100px;
   box-shadow:$shadow;
   outline:none;
   border:0;
-  padding:$space;
+  padding:$xSmallSpace $space;
   cursor:pointer;
   box-shadow:0 0 0 $bgDarkColor;
   transition:.3s;
@@ -20,6 +21,11 @@
     // color:$altColor;
     background-color: $textLightColor;
     box-shadow:$shadow;
+  }
+  &.inactive{
+    // filter:saturate(0) brightness(2.2);
+    background-color: $gray;
+    pointer-events:none;
   }
   &.secondary{
     background-color: transparent;

@@ -1,0 +1,41 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for ConfirmPoppin component
+*/
+.Popin{
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: $bgDarkColorLightAlpha;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+  opacity:0;
+  transition:.9s;
+  &.visible{
+    display:flex;
+    opacity:1;
+  }
+  &-content{
+    @include layout;
+    background-color: $white;
+    padding:$xxBigSpace $bigSpace;
+    box-sizing: border-box;
+    border-radius: $space;
+    border : solid 4px $textUltraLightColor; 
+    &-actions{
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-button{
+      margin-left:$space;
+    }
+  }
+}
+.ConfirmPoppin{
+  
+}

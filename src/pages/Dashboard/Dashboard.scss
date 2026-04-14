@@ -1,0 +1,32 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for Dashboard component
+*/
+
+.Content{
+    @include layout($desktop);
+}
+.FooterDash{
+  background-color: $bgDarkColorAlpha;
+  backdrop-filter: blur(5px);
+  padding:$space;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap:$space;
+  @include media($tablet){
+    position:absolute;
+    bottom:auto;
+    top:$headerHeight;
+    right:$bigSpace;
+    left:auto;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+
+  
+}

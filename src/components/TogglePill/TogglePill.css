@@ -1,0 +1,43 @@
+/*
+  Styles for TogglePill component
+*/
+.TogglePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.TogglePill-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.TogglePill-input:checked + .TogglePill-ui {
+  background: #4A40E0;
+}
+.TogglePill-input:checked + .TogglePill-ui .TogglePill-thumb {
+  transform: translateX(14px);
+}
+.TogglePill-ui {
+  position: relative;
+  width: 32px;
+  height: 18px;
+  border-radius: 200px;
+  background: #ded6f5;
+  transition: 0.25s ease;
+  flex-shrink: 0;
+}
+.TogglePill-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=TogglePill.css.map */

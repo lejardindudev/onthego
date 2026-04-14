@@ -3,20 +3,32 @@
 // import { useEffect } from 'react';
 
 //## UTILS  ###########
-import classManager from "../../helpers/classManager"
+import classManager from "../../utils/classManager";
 
 // ## ASSETS - RESSOURCES #############
-import './Button.css';
+import "./Button.css";
 
 //## COMPONENTS  ###########
 
-
-export default function Button({label,clickHandler,parentClass}) {
-  const dynamicClass = classManager([parentClass,"Cta"])
+export default function Button({
+  label,
+  clickHandler,
+  parentClass,
+  isActive = true,
+}) {
+  // Gestion des classes
+  const activeClass = isActive ? "" : "inactive";
+  const dynamicClass = classManager([parentClass, "Cta", activeClass]);
+  // console.log("from button : ", isActive);
   return (
     <>
-      <button className={dynamicClass} onClick={clickHandler}>{label}</button>
+      <button
+        disabled={!isActive}
+        className={dynamicClass}
+        onClick={clickHandler}
+      >
+        {label}
+      </button>
     </>
   );
-
 }

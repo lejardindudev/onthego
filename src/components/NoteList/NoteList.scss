@@ -4,6 +4,10 @@
 */
 .NoteList{
   padding-bottom:150px;
+  &-title{
+    color:$textLightColor;
+    text-transform: uppercase;
+  }
   &-pinned{
     padding-bottom:$bigSpace;
     margin-bottom:$xBigSpace;
@@ -11,9 +15,11 @@
     display:flex;
     gap:$space;
     flex-direction:column;
+    // flex-wrap:wrap;
     @include media($tablet){
     flex-direction:row;
-
+    width:100%;
+    overflow-y: auto;
     }
   }
   &-unPinned{

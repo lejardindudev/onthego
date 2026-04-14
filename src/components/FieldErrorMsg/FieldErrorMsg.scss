@@ -1,0 +1,9 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for FieldError component
+*/
+.FieldErrorMsg{
+  display:block;
+  color:red;
+  margin-left:$bigSpace;
+}

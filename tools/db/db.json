@@ -1,0 +1,78 @@
+{
+  "nextNoteId": 7,
+  "notes": [
+    {
+      "id": "0",
+      "title": "Livre à mémoriser",
+      "description": "Clean Code - Robert C. Martin. Notions clés : nommage, fonctions courtes, lisibilité. Revenir sur les chapitres liés aux fonctions pures, éviter les effets de bord et bien structurer les responsabilités. À relire progressivement avec prise de notes détaillée.",
+      "date": "01/04/26 - 09:30",
+      "isPinned": true,
+      "color": "color4"
+    },
+    {
+      "id": "1",
+      "title": "Citation",
+      "description": "“Programs must be written for people to read, and only incidentally for machines to execute.” ",
+      "date": "01/04/26 - 10:15",
+      "isPinned": false,
+      "color": ""
+    },
+    {
+      "id": "2",
+      "title": "Liste de courses",
+      "description": "Tomates, pâtes, parmesan, café, lait d’amande. ",
+      "date": "01/04/26 - 18:00",
+      "isPinned": false,
+      "color": ""
+    },
+    {
+      "id": "3",
+      "title": "Films à partager",
+      "description": "Inception, Interstellar, The Social Network. Captain fantastic, Jurassic Park, Attrape moi si tu peux, X-men origins, Brice de Nice, Docteur Folamour. Ajouter également quelques films plus récents à la liste et penser à noter pourquoi ils sont intéressants à partager.",
+      "date": "02/04/26 - 21:00",
+      "isPinned": false,
+      "color": "color1"
+    },
+    {
+      "id": "4",
+      "title": "Idée projet",
+      "description": "Créer une app de notes avec tags + recherche + système de pin. Ajouter éventuellement une gestion des couleurs, un tri intelligent et une synchronisation avec une API pour stockage distant.",
+      "date": "02/04/26 - 14:30",
+      "isPinned": false,
+      "color": "color5"
+    },
+    {
+      "id": "5",
+      "title": "Playlist chill",
+      "description": "Lo-fi beats, FKJ, Bonobo, Nujabes. Ajouter aussi des morceaux instrumentaux pour travailler en concentration et tester différentes ambiances selon les moments de la journée.",
+      "date": "03/04/26 - 20:00",
+      "isPinned": true,
+      "color": ""
+    },
+    {
+      "id": "6",
+      "title": "Recette rapide",
+      "description": "Pâtes + crème + champignons + ail + parmesan. ",
+      "date": "03/04/26 - 12:15",
+      "isPinned": false,
+      "color": ""
+    },
+    {
+      "id": "7",
+      "title": "Objectifs semaine",
+      "description": "Finir Redux, revoir Docker, avancer sur microservices.",
+      "date": "04/04/26 - 08:45",
+      "isPinned": false,
+      "color": "color2"
+    },
+    {
+      "title": "Liste courses",
+      "description": "Epicerie:\n\n- sel\n- poivre\n- huile d'olive\n\nLégumes : \n- Courgettes\n- tomates",
+      "date": "14/04/2026",
+      "isPinned": false,
+      "colorCustom": "",
+      "id": "LVsCASIOVDw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

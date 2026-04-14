@@ -52,20 +52,24 @@
   &-header{
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     &-title{
       font-family: $fontTitles;
       font-size:$bigSpace;
-    }
-    &-button{
-      
-      &-img{
-
+      a:link,a:visited{
+        color:$textColor;
+        text-decoration: none;
       }
     }
   }
   &-content{
     margin-bottom:$bigSpace;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+    display:-webkit-box;
+    -webkit-box-orient : vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &-footer{
     margin-top:auto;
@@ -80,6 +84,9 @@
       display:flex;
       gap:$xxSmallSpace;
       margin:0;
+      &-button.palet{//TODO: reactiver pour gestion des couleurs
+        display:none;
+      }
 
     }
   }
@@ -88,24 +95,29 @@
 
 .Button{
   background-color: transparent;
+  box-sizing:border-box;
   border:none;
   border-radius: 100px;
-  width:35px;
-  height:35px;
+  width:25px;
+  height:25px;
   display: flex;
   flex-shrink:0;
   justify-content: center;
   align-items: center;
   transition:.3s;
   cursor:pointer;
+  padding:0;
   &:hover{
     background-color: $bgDarkColor;
   }
-  @include media($tablet){
-    width:40px;
-    height:40px;
-  }
+  // @include media($tablet){
+  //   width:30px;
+  //   height:30px;
+  // }
   &-img{
-    width:100%;
+    width: 17px;
+    // display: block;
+    // height: 100%;
+    // object-fit: contain;
   }
 }

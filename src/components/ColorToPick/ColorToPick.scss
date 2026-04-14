@@ -1,0 +1,44 @@
+@use "../../assets/variables" as *;
+/*
+  Styles for ColorToPick component
+*/
+.ColorToPick{
+  background-color:white;
+  border:1px solid $white;
+  box-sizing: border-box;
+  transition:.3s;
+  &:hover{
+    cursor:pointer;
+    border-color:$textUltraLightColor;
+  }
+  &.active{
+    border:solid 3px $altColor;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    .ColorToPick-image{
+      width:15px;
+    }
+  }
+  &.square{
+    width:65px;
+    height:65px;
+    border-radius:$space;
+  }
+  &.color1{
+    background-color:$color1;
+  }
+  &.color2{
+    background-color:$color2;
+  }
+  &.color3{
+    background-color:$color3;
+  }
+  &.color4{
+    background-color:$color4;
+  }
+  &.color5{
+    background-color:$color5;
+  }
+  
+}

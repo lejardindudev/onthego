@@ -1,0 +1,8 @@
+/*
+  Styles for FieldError component
+*/
+.FieldErrorMsg {
+  display: block;
+  color: red;
+  margin-left: 1.6em;
+}/*# sourceMappingURL=FieldErrorMsg.css.map */

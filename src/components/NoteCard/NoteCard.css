@@ -47,14 +47,24 @@
 .NoteCard-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .NoteCard-header-title {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.6em;
 }
+.NoteCard-header-title a:link, .NoteCard-header-title a:visited {
+  color: #302950;
+  text-decoration: none;
+}
 .NoteCard-content {
   margin-bottom: 1.6em;
+  line-clamp: 6;
+  -webkit-line-clamp: 6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .NoteCard-footer {
   margin-top: auto;
@@ -71,29 +81,28 @@
   gap: 0.3em;
   margin: 0;
 }
+.NoteCard-footer-manage-button.palet {
+  display: none;
+}
 
 .Button {
   background-color: transparent;
+  box-sizing: border-box;
   border: none;
   border-radius: 100px;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
   cursor: pointer;
+  padding: 0;
 }
 .Button:hover {
   background-color: #F4EEFF;
 }
-@media screen and (min-width: 480px) {
-  .Button {
-    width: 40px;
-    height: 40px;
-  }
-}
 .Button-img {
-  width: 100%;
+  width: 17px;
 }/*# sourceMappingURL=NoteCard.css.map */
