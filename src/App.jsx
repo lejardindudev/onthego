@@ -44,15 +44,34 @@ function App() {
   // States filtrage
   const [filteredNotes, setFilteredNotes] = useState([...notes]);
 
+  // Normalize fonction
+  const normalize = (value) => {
+    return (
+      value
+        .trim()
+        .toLowerCase()
+        // Gestion des accents (NFD sépare l'accent de la lettre)
+        .normalize("NFD")
+        // Gestion des accents (supprime le caractère accent)
+        .replace(/[\u0300-\u036f]/g, "")
+    );
+  };
   // let filteredNotes = [...notes];
   const searchHandler = (e) => {
-    console.log(e.target.value);
-    const filtered = notes?.filter((note) => {
-      return note?.title?.trim().toLowerCase().includes(e.target.value);
-    });
-    if (filtered.length > 0) {
-      setFilteredNotes(filtered);
+    const query = normalize(e.target.value);
+    console.log(query);
+    // Champs de recherche vide
+    if (!query) {
+      setFilteredNotes(notes);
+      return;
     }
+
+    const filtered = notes.filter((note) => {
+      const title = normalize(note.title);
+      const description = normalize(note.description);
+      return title.includes(query) || description.includes(query);
+    });
+    setFilteredNotes(filtered);
   };
 
   return (
