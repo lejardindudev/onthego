@@ -1,11 +1,9 @@
 //## HOOKS ##########
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-// import { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 //## UTILS  ###########
-import NoteApi from "../../api/noteApi";
 import { addNote } from "../../store/notes/notesSlice";
 import VALIDATORS from "../../services/validate/noteValidator";
 // import classManager from "../../utils/classManager";
@@ -32,13 +30,20 @@ export default function CreateNotePage({}) {
   });
 
   // Gestion du create
+
+  const newId = (
+    useSelector((store) => {
+      return store.NOTE.lastCountId;
+    }) + 1
+  ).toString();
   const createHandler = async () => {
-    const newNote = await NoteApi.create({
+    const newNote = {
       ...formValues,
       date: new Date().toLocaleDateString(),
       isPinned: false,
-      colorCustom: "",
-    });
+      color: "",
+      id: newId,
+    };
     dispatch(addNote(newNote));
     navigate("/");
   };

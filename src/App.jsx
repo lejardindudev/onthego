@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 //## UTILS  ###########
-import NoteApi from "./api/noteApi";
 import { setNoteList } from "./store/notes/notesSlice";
 
 // ## ASSETS - RESSOURCES #############
@@ -17,22 +16,11 @@ import { Outlet, useLocation } from "react-router-dom";
 
 function App() {
   // Initialisation des hooks
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const location = useLocation();
 
   // Condition sur route
   const isVisible = location.pathname === "/";
-  // Ecriture dans le store et requêtage API
-  const fetchAllNotes = async () => {
-    const notes = await NoteApi.fetchAll();
-    // stockage des notes dans le store
-    dispatch(setNoteList(notes));
-  };
-
-  // Limitation à une seule requete api au chargement
-  useEffect(() => {
-    fetchAllNotes();
-  }, []);
 
   // Lecture du store
   const notes = useSelector((store) => store.NOTE.noteList);

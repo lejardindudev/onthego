@@ -1,7 +1,8 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import store from "./store/index.js";
+import { store, persistor } from "./store/index.js";
+import { PersistGate } from "redux-persist/integration/react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Assets
@@ -16,18 +17,20 @@ import CreateNotePage from "./pages/CreateNotePage";
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/note/add" element={<CreateNotePage />} />
-          <Route path="/note/:id" element={<SingleNotePage />} />
-          <Route path="/note/:id/edit" element={<EditNotePage />} />
+    <PersistGate persistor={persistor}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/note/add" element={<CreateNotePage />} />
+            <Route path="/note/:id" element={<SingleNotePage />} />
+            <Route path="/note/:id/edit" element={<EditNotePage />} />
 
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </PersistGate>
     {/* <App /> */}
   </Provider>,
 );

@@ -1,11 +1,8 @@
 //## HOOKS ##########
-// import { useState } from 'react';
-// import { useEffect } from 'react';
 import { useSelector } from "react-redux";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 //## UTILS  ###########
-// import classManager from "../../utils/classManager"
 
 // ## ASSETS - RESSOURCES #############
 import "./SingleNotePage.css";
@@ -16,9 +13,7 @@ import NoteCardForm from "../../components/NoteCardForm";
 import { Link } from "react-router-dom";
 
 export default function SingleNote({}) {
-  const navigate = useNavigate();
   const { id } = useParams();
-  const [searchParams] = useSearchParams();
   const notes = useSelector((store) => store.NOTE.noteList) || [];
   if (notes.length <= 0) {
     return <p>Chargement ...</p>;
@@ -34,7 +29,6 @@ export default function SingleNote({}) {
       </>
     );
   }
-
   return (
     <>
       <main className="SingleNote">
@@ -48,21 +42,8 @@ export default function SingleNote({}) {
           type="show"
           note={note}
           activeColor={note.color}
-          // id={note.id}
-          // title={note.title}
-          // description={note.description}
-          // date={note.date}
-          // isPinned={note.isPinned}
-          // colorCustom={note.color}
         />
       </main>
-      {/* <footer className='FooterDash'>
-              <Button 
-                label="Add note"
-                parentClass="FooterDash-button" 
-                clickHandler={()=> {console.log("click!")}}
-                />
-            </footer> */}
     </>
   );
 }

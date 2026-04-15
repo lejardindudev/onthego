@@ -7,7 +7,6 @@ import { deleteNoteStore } from "../../store/notes/notesSlice";
 
 //## UTILS  ###########
 import classManager from "../../utils/classManager";
-import NoteApi from "../../api/noteApi";
 
 // ## ASSETS - RESSOURCES #############
 import "./NoteCardForm.css";
@@ -45,12 +44,9 @@ export default function NoteCardForm({
   ]);
 
   const editNoteUrl = `/note/${note.id}/edit`;
-  const trashNoteUrl = `/note/${note.id}/delete`;
 
   // deleteHandler;
   const deleteNote = async () => {
-    // Call APi
-    await NoteApi.deleteById(note.id);
     // Updating store
     dispatch(deleteNoteStore(note.id));
     navigate("/");

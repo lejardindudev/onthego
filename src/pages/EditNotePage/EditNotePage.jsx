@@ -5,8 +5,6 @@ import { updateNote } from "../../store/notes/notesSlice";
 import { useNavigate, useParams } from "react-router-dom";
 
 //## UTILS  ###########
-// import classManager from "../../utils/classManager"
-import NoteApi from "../../api/noteApi";
 import VALIDATORS from "../../services/validate/noteValidator";
 
 // ## ASSETS - RESSOURCES #############
@@ -76,7 +74,7 @@ export default function EditNotePage() {
 
   // Form's submit buttons handlers
   const handleSubmit = async () => {
-    const updatedNote = await NoteApi.update({ ...note, ...formValues });
+    const updatedNote = { ...note, ...formValues };
     dispatch(updateNote(updatedNote));
     navigate(`/`);
   };
