@@ -9,24 +9,31 @@
 
 ## 🧱 Structure du projet
 
+- `docs/`
+- `src/`
+- `tools/`
+  - `templates/`
+  - `copy-to/`
+- `.env` (Non versionné)
+- `.env-sample`
 - `docker-compose.linux.yml`
 - `docker-compose.windows.yml`
-- `.env` (Linux uniquement pour UID/GID)
 - `package.json`
-- `src/`
+- `generate-react-cli.json`
+- `jsconfig.json`
 
 ---
-
-<!-- TODO: adapter explications generate-react-cli -->
 
 # 🐧 Installation (Linux)
 
 ```bash
 git clone <repo>
 cd <repo>
-docker compose -f docker-compose.linux.yml run --rm app npm install
+docker run -it --rm --user $(id -u):$(id -g) -v ${PWD}:/app -w /app node:24-bookworm sh -c "npm create vite@latest . -- --template react && npm pkg set scripts.g:component='generate-react-cli component'"
 docker compose -f docker-compose.linux.yml up
 ```
+
+**NB: Copier les fichiers présents dans le répertoire tools/copy-to**
 
 👉 Accès : http://localhost:5173
 
@@ -37,9 +44,11 @@ docker compose -f docker-compose.linux.yml up
 ```powershell
 git clone <repo>
 cd <repo>
-docker compose -f docker-compose.windows.yml run --rm app npm install
+docker run -it --rm -v ${PWD}:/app -w /app node:24-bookworm sh -c "npm create vite@latest . -- --template react && npm pkg set scripts.g:component='generate-react-cli component'"
 docker compose -f docker-compose.windows.yml up
 ```
+
+**NB: Copier les fichiers présents dans le répertoire tools/copy-to**
 
 👉 Accès : http://localhost:5173
 
@@ -49,16 +58,27 @@ docker compose -f docker-compose.windows.yml up
 
 ## Générer un composant
 
+La libraire generate-react-cli permet d'automatiser la création de composants en utilisant un dossier "template de référence".
+Le composant créé contient d'office :
+
+- Un fichier .scss du nom du composant
+- Un import de mon utils classManager pour gérer la propagation des classes parentes aux childComponents (utilisation de BEM)
+- import du fichier css
+- l'écriture de la classe dans le composant
+- index.js pour réduire la longueur de l'import
+
 ### Linux
 
 ```bash
-docker compose -f docker-compose.linux.yml run --rm app npm run g:component NomDuComposant
+yes | docker compose -f docker-compose.linux.yml run --rm app npx generate-react-cli component [Nom_du_component]
+
 ```
 
 ### Windows
 
 ```powershell
-docker compose -f docker-compose.windows.yml run --rm app npm run g:component NomDuComposant
+docker compose -f docker-compose.windows.yml run --rm app sh -c "printf 'y\n' | npx generate-react-cli component [Nom_du_component]"
+
 ```
 
 ---
@@ -68,49 +88,13 @@ docker compose -f docker-compose.windows.yml run --rm app npm run g:component No
 ### Linux
 
 ```bash
-docker compose -f docker-compose.linux.yml run --rm app npm install axios
+docker compose -f docker-compose.linux.yml run --rm app npm install [nom_du_module]
 ```
 
 ### Windows
 
 ```powershell
-docker compose -f docker-compose.windows.yml run --rm app npm install axios
+docker compose -f docker-compose.windows.yml run --rm app npm install [nom_du_module]
 ```
 
 ---
-
-# 🧠 Rappels importants
-
-- ❌ Ne jamais versionner `node_modules`
-- ✔ Toujours utiliser Docker pour installer les dépendances
-- ✔ Séparer :
-  - création (docker run)
-  - développement (docker compose up)
-  - commandes ponctuelles (docker compose run)
-
----
-
-# 🔥 Workflow rapide
-
-## Linux
-
-```bash
-docker compose -f docker-compose.linux.yml run --rm app npm install
-docker compose -f docker-compose.linux.yml up
-```
-
-## Windows
-
-```powershell
-docker compose -f docker-compose.windows.yml run --rm app npm install
-docker compose -f docker-compose.windows.yml up
-```
-
----
-
-# ✅ Résultat
-
-- Environnement reproductible
-- Compatible Linux / Windows
-- Pas de problème de permissions
-- Setup propre pour projet public
