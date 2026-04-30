@@ -91,6 +91,12 @@ docker compose -f docker-compose.windows.yml up
 
 ---
 
+### 📖 Installation détaillée
+
+Voir la documentation complète :
+
+👉 [docs/deploy.md](docs/deploy.md)
+
 ## 📌 Remarques
 
 - Utilisation possible de localStorage ou JSON server
