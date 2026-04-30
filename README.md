@@ -69,10 +69,25 @@ src/
 
 ## ⚙️ Installation
 
+### Avec Docker (recommandé)
+
+#### Windows:
+
 ```bash
-npm install
-npm run dev
+git clone <repo>
+cd <repo>
+docker compose -f docker-compose.windows.yml up
 ```
+
+#### Linux:
+
+```bash
+git clone <repo>
+cd <repo>
+docker compose -f docker-compose.windows.yml up
+```
+
+👉 Accès : http://localhost:5173
 
 ---
 
